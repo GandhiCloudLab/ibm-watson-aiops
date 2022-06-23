@@ -1,12 +1,12 @@
 # Logs Data flow in Watson AIOps
 
-This document explains about how does the IBM Cloud Pak for Watson AIOps process the logs and how it stores the incoming logs in a different format and places.
+This document explains about how does the IBM Cloud Pak for Watson AIOps stores the incoming the logs and process it.
 
 ![Logs Data flow](./images/logs-data-flow.png)
 
 ## 1. Logging system
 
-Logs are shipped from application environment to the logging system such as Splunk, Humio and etc.
+Logs are shipped from application environment to the logging system such as Splunk, Humio and etc through the Data Shippers like FluentD, Logstash, Elastic Beats and etc.
 
 ## 2. Log Mapping
 
@@ -32,9 +32,9 @@ The below picture shows, `@rawstring` and `kubernetes container name` columns in
 
 Here is the mapping for Splunk.
 
-Here the `@rawstring` of the humio field is mapped to the `message_field` in WAIOps for further processing.
+Here the `_raw` of the humio field is mapped to the `message_field` in WAIOps for further processing.
 
-Also the `kubernetes container name` is considered as `entity type` in WAIOps
+Also the `source` is considered as `log entity types` in WAIOps
 
 ![File Observer](./images/splunk-mapping.png)
 
@@ -47,7 +47,7 @@ During the training the logs are pulled from the logging system (humio, etc) and
 
 Here is how the logs are stored in elastic search. This picture shows the above selected log line `Info : Credit Score updated for loan  : 53192`
 
-![File Observer](./images/log-in-es-for-training.png)
+![Log](./images/log-in-es-for-training.png)
 
 #### Log Templates
 
@@ -57,12 +57,12 @@ So the log lines are stored as log templates in the WAIOps elastic search.
 
 Here is how the logs are stored in elastic search as log templates. This picture shows the log template for above selected log line `Info : Credit Score updated for loan  : 53192`
 
-![File Observer](./images/log-templates.png)
+![Log](./images/log-in-es-as-templates.png)
 
 
 ## 4. Inferencing
 
-During the inferencing modes the logs are pulled from the logging system (humio, etc), parsed and compared with the existing log templates. If it is not matching with the log template then that will be detected as anomaly. 
+During the inferencing mode the logs are pulled from the logging system (humio, etc), parsed and compared with the existing log templates. If they are not matching with the log template then they will be detected as anomaly. 
 
 All the incoming logs are matched with the log templates and kept in a `windowed-logs` Kafka topic as like below. 
 
@@ -74,6 +74,6 @@ When the logs are not matching the log-templates then it there will be an entry 
 ![Kafka](./images/kafka-events.png)
 
 
-Based on the existing policy the log events would be created as an alert in a `input.alerts` Kafka topic as like below. 
+Based on the existing policy the log events would be created as an alert in `input.alerts` Kafka topic as like below. 
 
 ![Kafka](./images/kafka-alerts.png)
