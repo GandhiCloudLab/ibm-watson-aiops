@@ -1,6 +1,6 @@
-# Log Anomaly detection Data flow in IBM Cloud Pak for Watson AIOps
+# Log Anomaly detection Data flow in Watson AIOps
 
-This document explains about how the incoming logs are stored/converted in various stages of the log anomaly detection process in Watson AIOps. 
+This document explains about how Watson AIOps stores/converts the incoming logs as part of the log anomaly detection process. 
  
 ![Logs Data flow](./images/logs-data-flow.png)
 
