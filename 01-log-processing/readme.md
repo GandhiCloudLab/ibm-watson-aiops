@@ -32,8 +32,8 @@ Info : Credit Score updated for loan  : 53192
 ### Splunk mapping
 
 Here is the mapping for Splunk.
-- The humio field `_raw` is mapped to `message_field` in WAIOps for further processing.
-- The humio field `source` is mapped to `log entity types` in WAIOps
+- The splunk field `_raw` is mapped to `message_field` in WAIOps for further processing.
+- The splunk field `source` is mapped to `log entity types` in WAIOps
 
 ![File Observer](./images/splunk-mapping.png)
 
