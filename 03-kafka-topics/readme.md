@@ -71,7 +71,7 @@ The incoming logs would go through the below kafka topics for the log anomaly de
 - cp4waiops-cartridge.lifecycle.input.events
 - cp4waiops-cartridge.lifecycle.input.alerts
 
-This is explained in the document [01-log-processing](./01-log-processing)
+This is explained in the document [01-log-processing](../01-log-processing)
 
 You  can run the below scripts separately to print the content of the above topics.
 
