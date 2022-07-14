@@ -33,7 +33,7 @@ PASSWORD : Z1.................
 
 Using the above url, user, password access the Flink Job UI. It will show screens like the below.
 
-<img src="images/image2.png">
+<img src="images/flink.png">
 
 Here snow-connect (servicenow) connection is shown.
 
