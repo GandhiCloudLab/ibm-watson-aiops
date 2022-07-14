@@ -62,7 +62,7 @@ sh 01-print-topology-url-usr-pwd.sh
 
 ### 5. Upload the bingo file
 
-Run the below script to upload bingo files. Here we are uploading the topology file [../data/file-bingo.txt](../data/file-bingo.txt)
+Run the below script to upload bingo files. Here we are uploading the topology file [./files/data/file-bingo.txt](./files/data/file-bingo.txt)
 
 ```
 cd files
@@ -99,13 +99,13 @@ The bingo related resources are displayed.
 
 ### 7. Update Topology
 
-1. Modify the topology file [./data/file-bingo.txt](../data/file-bingo.txt)
+1. Modify the topology file [./files/data/file-bingo.txt](./files/data/file-bingo.txt)
 
 ex: Change the `bingo-details-v1` into `bingo-details-v5`
 
 2. Upload the modified bingo file
 
-Run the below script to upload the updated bingo files. Here we are uploading the topology file [../data/file-bingo.txt](../data/file-bingo.txt)
+Run the below script to upload the updated bingo files. Here we are uploading the topology file [./files/data/file-bingo.txt](./files/data/file-bingo.txt)
 
 ```
 cd files
