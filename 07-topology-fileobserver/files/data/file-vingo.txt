@@ -1,0 +1,11 @@
+V:{"_operation":"InsertReplace", "uniqueId":"vingo-ratings-v1", "entityTypes":["deployment"],"matchTokens":["vingo-ratings-v1"],"name":"vingo-ratings-v1", "tags":["vingo"], "_references":[]}
+
+V:{"_operation":"InsertReplace", "uniqueId":"vingo-reviews-v1", "entityTypes":["deployment"],"mergeTokens":["vingo-reviews-v1"],"matchTokens":["vingo-reviews-v1"],"name":"vingo-reviews-v1", "tags":["vingo"], "_references":[]}
+
+V:{"_operation":"InsertReplace", "uniqueId":"vingo-reviews-v2", "entityTypes":["deployment"],"matchTokens":["vingo-reviews-v2"],"name":"vingo-reviews-v2","tags":["vingo"], "_references":[{"_edgeType":"dependsOn", "_toUniqueId":"vingo-ratings-v1"}]}
+
+V:{"_operation":"InsertReplace", "uniqueId":"vingo-reviews-v3", "entityTypes":["deployment"],"matchTokens":["vingo-reviews-v3"],"name":"vingo-reviews-v3","tags":["vingo"], "_references":[{"_edgeType":"dependsOn", "_toUniqueId":"vingo-ratings-v1"}]}
+
+V:{"_operation":"InsertReplace", "uniqueId":"vingo-details-v1", "entityTypes":["deployment"],"mergeTokens":["vingo-details-v1"],"matchTokens":["vingo-details"], "name":"vingo-details-v1", "tags":["vingo"], "_references":[]}
+
+V:{"_operation":"InsertReplace", "uniqueId":"vingo-product-v1", "entityTypes":["deployment"],"matchTokens":["vingo-product-v1"], "name":"vingo-product-v1", "tags":["vingo"], "_references":[{"_edgeType":"dependsOn", "_toUniqueId":"vingo-details-v1"},{"_edgeType":"dependsOn", "_toUniqueId":"vingo-reviews-v1"},{"_edgeType":"dependsOn", "_toUniqueId":"vingo-reviews-v2"},{"_edgeType":"dependsOn", "_toUniqueId":"vingo-reviews-v3"}]}

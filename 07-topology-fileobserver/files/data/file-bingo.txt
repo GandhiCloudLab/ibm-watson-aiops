@@ -1,0 +1,12 @@
+V:{"_operation":"InsertReplace", "uniqueId":"bingo-ratings-v1", "entityTypes":["deployment"],"matchTokens":["bingo-ratings-v1"],"name":"bingo-ratings-v1", "tags":["bingo"], "_references":[]}
+
+V:{"_operation":"InsertReplace", "uniqueId":"bingo-reviews-v1", "entityTypes":["deployment"],"mergeTokens":["bingo-reviews-v1"],"matchTokens":["bingo-reviews-v1"],"name":"bingo-reviews-v1", "tags":["bingo"], "_references":[]}
+
+V:{"_operation":"InsertReplace", "uniqueId":"bingo-reviews-v2", "entityTypes":["deployment"],"matchTokens":["bingo-reviews-v2"],"name":"bingo-reviews-v2","tags":["bingo"], "_references":[{"_edgeType":"dependsOn", "_toUniqueId":"bingo-ratings-v1"}]}
+
+V:{"_operation":"InsertReplace", "uniqueId":"bingo-reviews-v3", "entityTypes":["deployment"],"matchTokens":["bingo-reviews-v3"],"name":"bingo-reviews-v3","tags":["bingo"], "_references":[{"_edgeType":"dependsOn", "_toUniqueId":"bingo-ratings-v1"}]}
+
+V:{"_operation":"InsertReplace", "uniqueId":"bingo-details-v5", "entityTypes":["deployment"],"mergeTokens":["bingo-details-v5"],"matchTokens":["bingo-details-v5"], "name":"bingo-details-v5", "tags":["bingo"], "_references":[]}
+
+V:{"_operation":"InsertReplace", "uniqueId":"bingo-product-v1", "entityTypes":["deployment"],"matchTokens":["bingo-product-v1"], "name":"bingo-product-v1", "tags":["bingo"], "_references":[{"_edgeType":"dependsOn", "_toUniqueId":"bingo-details-v1"},{"_edgeType":"dependsOn", "_toUniqueId":"bingo-reviews-v1"},{"_edgeType":"dependsOn", "_toUniqueId":"bingo-reviews-v2"},{"_edgeType":"dependsOn", "_toUniqueId":"bingo-reviews-v3"}]}
+
