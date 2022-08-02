@@ -1,6 +1,13 @@
-#  Topology File Observer
+#  Topology File Observer Job
 
-This document explains about how the topology file observer can be created and used.
+This document explains about how topology file observer job can be created and used in Watson AIOPs.
+
+Using the File Observer functionality, you can write your data to a file in a specific format, upload this data to the topology service, and then visualize this data as a topology view.
+
+The article is based on the the following
+
+RedHat OpenShift 4.8 on IBM Cloud (ROKS)
+Watson AIOps 3.4.0
 
 ## 1. Login into OCP Cluster
 
