@@ -7,6 +7,7 @@ Using the File Observer functionality, you can write your data to a file in a sp
 The article is based on the the following
 
 RedHat OpenShift 4.8 on IBM Cloud (ROKS)
+
 Watson AIOps 3.4.0
 
 ## 1. Login into OCP Cluster
