@@ -16,7 +16,7 @@ https://docs.confluent.io/platform/current/app-development/kafkacat-usage.html
 
 Get the Kafka topic name created in WAIOps.
 
-![Kafka](../images/image1.png)
+![Kafka](./images/image1.png)
 
 #### 2. Update Properties
 
@@ -62,7 +62,7 @@ sh 21-push-events-to-kafka.sh
 
 The pushed events can be seen in Alerts Viewer as below.
 
-![Kafka](../images/image2.png)
+![Kafka](./images/image2.png)
 ``
 
 ## Appendix
