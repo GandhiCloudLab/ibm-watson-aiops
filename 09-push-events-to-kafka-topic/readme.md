@@ -63,7 +63,7 @@ sh 21-push-events-to-kafka.sh
 The pushed events can be seen in Alerts Viewer as below.
 
 ![Kafka](./images/image2.png)
-``
+![Kafka](./images/image3.png)
 
 ## Appendix
 
